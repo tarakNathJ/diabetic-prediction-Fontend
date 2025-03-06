@@ -19,7 +19,7 @@ export default function ForgotPassword() {
     try {
       SetLoding(true);
       SetError(false);
-      const Responce = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/Api/V1/changePassword`, {
+      const Responce = await axios.post(`${import.meta.env.REACT_APP_API_URL}/Api/V1/changePassword`, {
         email: email,
         oldPassword: OldPassword,
         newPassword: password
