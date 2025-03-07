@@ -76,7 +76,7 @@ export const useRiskStore = create<RiskState>((set, get) => ({
    
    
     try {
-      const Responce = await axios.post(`${import.meta.env.REACT_APP_API_URL}/Api/V1/predict`, {
+      const Responce = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/Api/V1/predict`, {
         ID:state.userId,
         age:state.age,
         hypertension:state.hypertension == true? "yes" :"no",

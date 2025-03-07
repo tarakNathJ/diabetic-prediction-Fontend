@@ -56,7 +56,7 @@ export const useAuthStore = create<AuthState>()(
 
         try {
           // Simulate API call
-          const Responce = await axios.post(`${import.meta.env.REACT_APP_API_URL}/Api/V1/logIn`, {
+          const Responce = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/Api/V1/logIn`, {
             email: email,
             password: password
 
@@ -81,7 +81,7 @@ export const useAuthStore = create<AuthState>()(
 
       signup: async (email: string, password: string, name: string) => {
         try {
-          const Responce = await axios.post(`${import.meta.env.REACT_APP_API_URL}/Api/V1/signUp`, {
+          const Responce = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/Api/V1/signUp`, {
             userName:name,
             email:email,
             password:password
@@ -100,7 +100,7 @@ export const useAuthStore = create<AuthState>()(
 
       logout: async() => {
         try {
-          const Responce = await axios.post(`${import.meta.env.REACT_APP_API_URL}/Api/V1/logOut`, {
+          const Responce = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/Api/V1/logOut`, {
          
           }, {
             headers: {

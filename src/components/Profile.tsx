@@ -30,7 +30,7 @@ export default function Profile() {
 async function API_Controller (ID: string){
   const Dispatch = useDispatch();
   try {
-    const Responce = await axios.post(`${import.meta.env.REACT_APP_API_URL}/Api/V1/AllResult`, {
+    const Responce = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/Api/V1/AllResult`, {
       ID:ID
     }, {
       headers: {
